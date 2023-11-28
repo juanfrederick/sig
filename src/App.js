@@ -100,7 +100,7 @@ const App = () => {
         </Grid>
       </Grid>
     </>
-  );
+  )``;
 };
 
 export default App;
