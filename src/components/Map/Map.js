@@ -6,7 +6,7 @@ import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import mapStyles from "../../mapStyles";
 import useStyles from "./styles.js";
 
-const Map = ({ coords, places, setCoords, setBounds, setChildClicked }) => {
+const Map = ({ coords, places, setCoords, setChildClicked }) => {
   const matches = useMediaQuery("(min-width:600px)");
   const classes = useStyles();
 
@@ -15,7 +15,7 @@ const Map = ({ coords, places, setCoords, setBounds, setChildClicked }) => {
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyA1MgLuZuyqR_OGY3ob3M52N46TDBRI_9k" }}
         center={coords}
-        defaultZoom={14}
+        defaultZoom={15}
         margin={[50, 50, 50, 50]}
         options={{
           disableDefaultUI: true,
@@ -24,7 +24,6 @@ const Map = ({ coords, places, setCoords, setBounds, setChildClicked }) => {
         }}
         onChange={(e) => {
           setCoords({ lat: e.center.lat, lng: e.center.lng });
-          setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
         }}
         yesIWantToUseGoogleMapApiInternals
         onChildClick={(child) => setChildClicked(child)}

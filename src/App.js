@@ -6,22 +6,8 @@ import Map from "./components/Map/Map";
 import { data as dummy } from "./constant/data";
 
 const App = () => {
-  const [type, setType] = useState("restaurants");
-  const [rating, setRating] = useState("");
-
   const [coords, setCoords] = useState({});
-  const [bounds, setBounds] = useState(null);
-  const [data, setData] = useState(dummy);
-
-  const [autocomplete, setAutocomplete] = useState(null);
   const [childClicked, setChildClicked] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    if (bounds) {
-      setIsLoading(true);
-    }
-  }, [bounds, type]);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -31,32 +17,13 @@ const App = () => {
     );
   }, []);
 
-  const onLoad = (autoC) => setAutocomplete(autoC);
-
-  const onPlaceChanged = () => {
-    const lat = autocomplete?.getPlace()?.geometry?.location?.lat();
-    const lng = autocomplete?.getPlace()?.geometry?.location?.lng();
-
-    if (lat && lng) {
-      setCoords({ lat, lng });
-    }
-  };
-
   return (
     <>
       <CssBaseline />
-      <Header onPlaceChanged={onPlaceChanged} onLoad={onLoad} />
+      <Header />
       <Grid container spacing={3} style={{ width: "100%" }}>
         <Grid item xs={12} md={4}>
-          <List
-            isLoading={isLoading}
-            childClicked={childClicked}
-            places={data}
-            type={type}
-            setType={setType}
-            rating={rating}
-            setRating={setRating}
-          />
+          <List childClicked={childClicked} places={dummy} />
         </Grid>
         <Grid
           item
@@ -70,10 +37,9 @@ const App = () => {
         >
           <Map
             setChildClicked={setChildClicked}
-            setBounds={setBounds}
             setCoords={setCoords}
             coords={coords}
-            places={data}
+            places={dummy}
           />
         </Grid>
       </Grid>

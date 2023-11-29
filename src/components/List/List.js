@@ -4,15 +4,7 @@ import { Grid, Typography } from "@material-ui/core";
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 import useStyles from "./styles.js";
 
-const List = ({
-  places,
-  type,
-  setType,
-  rating,
-  setRating,
-  childClicked,
-  isLoading,
-}) => {
+const List = ({ places, childClicked }) => {
   const [elRefs, setElRefs] = useState([]);
   const classes = useStyles();
 
