@@ -7,17 +7,17 @@ import { data as dummy } from "./constant/data";
 
 const App = () => {
   const [coords, setCoords] = useState({});
+  const [location, setLocation] = useState({});
   const [childClicked, setChildClicked] = useState(null);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
         setCoords({ lat: latitude, lng: longitude });
+        setLocation({ lat: latitude, lng: longitude });
       }
     );
   }, []);
-
-  console.log("Asdf", dummy.length);
 
   return (
     <>
@@ -42,6 +42,7 @@ const App = () => {
             setCoords={setCoords}
             coords={coords}
             places={dummy}
+            location={location}
           />
         </Grid>
       </Grid>
