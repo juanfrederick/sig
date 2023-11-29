@@ -49,7 +49,7 @@ const Map = ({ coords, places, setCoords, setChildClicked }) => {
                   </Typography>
                   <img
                     className={classes.pointer}
-                    src={place.image}
+                    src={place.image1}
                     alt="pic"
                   />
                 </Paper>

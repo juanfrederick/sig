@@ -17,6 +17,8 @@ const App = () => {
     );
   }, []);
 
+  console.log("Asdf", dummy.length);
+
   return (
     <>
       <CssBaseline />

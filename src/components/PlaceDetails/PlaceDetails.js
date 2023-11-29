@@ -1,31 +1,41 @@
 import React from "react";
 import { Typography, Card, CardMedia, CardContent } from "@material-ui/core";
 
-// import useStyles from "./styles.js";
-
 const PlaceDetails = ({ place, selected, refProp }) => {
   if (selected)
     refProp?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  // const classes = useStyles();
 
   return (
     <Card elevation={6}>
-      <CardMedia
-        style={{ height: 350 }}
-        image={place.image}
-        title={place.nama}
-      />
+      <div style={{ display: "flex" }}>
+        <CardMedia
+          style={{ height: 350, flex: 1 }}
+          image={place.image1}
+          title={place.nama}
+        />
+        <CardMedia
+          style={{ height: 350, flex: 1 }}
+          image={place.image2}
+          title={place.nama}
+        />
+      </div>
       <CardContent>
         <Typography gutterBottom>{place.nama}</Typography>
         <Typography gutterBottom>{place.lokasi}</Typography>
-        <Typography gutterBottom>Jam: {place.jam}</Typography>
         <Typography gutterBottom>
-          Jenis Layanan: {place.jenis_layanan}
+          <span style={{ color: "red" }}>Jam:</span> {place.jam}
         </Typography>
         <Typography gutterBottom>
-          Tenaga Kesehatan: {place.tenaga_kesehatan}
+          <span style={{ color: "red" }}>Jenis Layanan:</span>{" "}
+          {place.jenis_layanan}
         </Typography>
-        <Typography gutterBottom>Kapasitas: {place.kapasitas}</Typography>
+        <Typography gutterBottom>
+          <span style={{ color: "red" }}>Tenaga Kesehatan:</span>{" "}
+          {place.tenaga_kesehatan}
+        </Typography>
+        <Typography gutterBottom>
+          <span style={{ color: "red" }}>Kapasitas:</span> {place.kapasitas}
+        </Typography>
       </CardContent>
     </Card>
   );
