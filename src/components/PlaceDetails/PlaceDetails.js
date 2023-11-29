@@ -18,7 +18,14 @@ const PlaceDetails = ({ place, selected, refProp }) => {
       <CardContent>
         <Typography gutterBottom>{place.nama}</Typography>
         <Typography gutterBottom>{place.lokasi}</Typography>
-        <Typography gutterBottom>{place.jam}</Typography>
+        <Typography gutterBottom>Jam: {place.jam}</Typography>
+        <Typography gutterBottom>
+          Jenis Layanan: {place.jenis_layanan}
+        </Typography>
+        <Typography gutterBottom>
+          Tenaga Kesehatan: {place.tenaga_kesehatan}
+        </Typography>
+        <Typography gutterBottom>Kapasitas: {place.kapasitas}</Typography>
       </CardContent>
     </Card>
   );

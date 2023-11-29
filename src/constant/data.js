@@ -8,8 +8,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "24 jam",
-    lat: "1.026492",
-    long: "104.025714",
+    lat: "1.1454597394600972",
+    long: "104.02822995479345",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -22,8 +22,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "24 jam",
-    lat: "1.025167",
-    long: "104.026389",
+    lat: "1.1306256198259204",
+    long: "104.09721889526739",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -36,8 +36,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "24 jam",
-    lat: "1.027222",
-    long: "104.024722",
+    lat: "1.1443888793769994",
+    long: "104.00172054130203",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -50,8 +50,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "24 jam",
-    lat: "1.017625",
-    long: "104.028333",
+    lat: "1.136217139958231",
+    long: "104.14082948364346",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -65,8 +65,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "24 jam",
-    lat: "1.02625",
-    long: "104.025",
+    lat: "1.1045923015210466",
+    long: "104.05337781246578",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -79,8 +79,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "24 jam",
-    lat: "1.020833",
-    long: "104.0225",
+    lat: "1.0365346676463612",
+    long: "103.95387153759496",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -94,8 +94,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "24 jam",
-    lat: "1.024167",
-    long: "104.020833",
+    lat: "1.0277908411640333",
+    long: "104.06439117013814",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -108,8 +108,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "24 jam",
-    lat: "1.0225",
-    long: "104",
+    lat: "1.1097057890087858",
+    long: "103.9526656989745",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -122,8 +122,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "08.00 - 20.00",
-    lat: "1.023333",
-    long: "104.023333",
+    lat: "1.103059370089818",
+    long: "103.96996181061233",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -136,8 +136,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "08.00 - 20.00",
-    lat: "1.0225",
-    long: "104.0225",
+    lat: "1.0548894771836868",
+    long: "103.97817889712091",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -150,8 +150,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "08.00 - 20.00",
-    lat: "1.020833",
-    long: "104.0225",
+    lat: "1.0371287134456184",
+    long: "103.96482614130194",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -164,8 +164,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "08.00 - 20.00",
-    lat: "1.021667",
-    long: "104.023333",
+    lat: "1.1834017890540942",
+    long: "104.01460888362963",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -178,8 +178,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "08.00 - 20.00",
-    lat: "1.027222",
-    long: "104.024722",
+    lat: "1.1444210594644193",
+    long: "104.00166689712098",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -192,8 +192,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "08.00 - 20.00",
-    lat: "1.025",
-    long: "104.025",
+    lat: "1.1563444270556986",
+    long: "103.88905712119588",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -206,8 +206,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "08.00 - 20.00",
-    lat: "1.023333",
-    long: "104.023333",
+    lat: "1.015362779095387",
+    long: "103.92951001061216",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -220,8 +220,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "08.00 - 20.00",
-    lat: "1.023333",
-    long: "104",
+    lat: "0.8474062567100826",
+    long: "104.25949828400934",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -234,8 +234,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "08.00 - 20.00",
-    lat: "1.021667",
-    long: "104.023333",
+    lat: "1.0842062035520001",
+    long: "103.90346933800726",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -248,8 +248,8 @@ export const data = [
     tenaga_kesehatan:
       "Dokter umum, dokter gigi, bidan, perawat, apoteker, tenaga gizi, tenaga laboratorium, tenaga farmasi, tenaga TB paru",
     jam: "08.00 - 20.00",
-    lat: "1.023333",
-    long: "104.023333",
+    lat: "1.1334208039159377",
+    long: "103.97883329897437",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -261,8 +261,8 @@ export const data = [
       "Pemeriksaan umum, kesehatan gigi dan mulut, KIA, KB, imunisasi",
     tenaga_kesehatan: "Bidan",
     jam: "08.00 - 20.00",
-    lat: "1.017625",
-    long: "104.028333",
+    lat: "1.1555448956397",
+    long: "104.01389879382658",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -274,8 +274,8 @@ export const data = [
       "Pemeriksaan umum, kesehatan gigi dan mulut, KIA, KB, imunisasi",
     tenaga_kesehatan: "Bidan",
     jam: "08.00 - 20.00",
-    lat: "1.021667",
-    long: "104.023333",
+    lat: "1.1833374297684611",
+    long: "104.01464107013827",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -287,8 +287,8 @@ export const data = [
       "Pemeriksaan umum, kesehatan gigi dan mulut, KIA, KB, imunisasi",
     tenaga_kesehatan: "Bidan",
     jam: "08.00 - 20.00",
-    lat: "1.024167",
-    long: "104.020833",
+    lat: "1.0277586571596966",
+    long: "104.06432678033453",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -300,8 +300,8 @@ export const data = [
       "Pemeriksaan umum, kesehatan gigi dan mulut, KIA, KB, imunisasi",
     tenaga_kesehatan: "Bidan",
     jam: "08.00 - 20.00",
-    lat: "1.021667",
-    long: "104.023333",
+    lat: "1.0840882103059883",
+    long: "103.9035122701381",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
@@ -313,8 +313,8 @@ export const data = [
       "Pemeriksaan umum, kesehatan gigi dan mulut, KIA, KB, imunisasi",
     tenaga_kesehatan: "Bidan",
     jam: "08.00 - 20.00",
-    lat: "1.023333",
-    long: "104.023333",
+    lat: "1.1327880871249467",
+    long: "103.97873673944846",
     image:
       "https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg",
   },
