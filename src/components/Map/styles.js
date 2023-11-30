@@ -16,7 +16,11 @@ export default makeStyles(() => ({
     position: "absolute",
     transform: "translate(-50%, -50%)",
     zIndex: 1,
-    "&:hover": { zIndex: 2 },
+    background: "transparent",
+    border: "none",
+    outline: "none",
+
+    "&:hover": { zIndex: 2, cursor: "pointer" },
   },
   pointer: {
     cursor: "pointer",
