@@ -62,7 +62,6 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
       },
 
       (result, status) => {
-        console.log("🚀 ~ file: Map.js:70 ~ useEffect ~ result:", result);
         if (status === google.maps.DirectionsStatus.OK) {
           directionsRenderer.setDirections(result);
         } else {
