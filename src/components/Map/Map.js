@@ -1,19 +1,52 @@
 /* eslint-disable no-undef */
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import GoogleMapReact from "google-map-react";
 import { Paper, Typography } from "@material-ui/core";
 
 import mapStyles from "../../mapStyles";
 import useStyles from "./styles.js";
 import Marker from "./Marker.js";
+import { data } from "../../constant/data.js";
+
+const calculateDistance = (location1, location2) => {
+  const R = 6371; // Earth radius in kilometers
+  const dLat = (location2.lat - location1.lat) * (Math.PI / 180);
+  const dLon = (location2.long - location1.lng) * (Math.PI / 180);
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(location1.lat * (Math.PI / 180)) *
+      Math.cos(location2.lat * (Math.PI / 180)) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const distance = R * c; // Distance in kilometers
+  return distance;
+};
+
+const findClosestLocation = (location) => {
+  let closestLocation;
+  let minDistance = Number.MAX_VALUE;
+
+  data.forEach((e) => {
+    const distance = calculateDistance(location, e);
+    if (distance < minDistance) {
+      minDistance = distance;
+      closestLocation = e;
+    }
+  });
+
+  return closestLocation;
+};
 
 const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
   const classes = useStyles();
-  const [destination, setDestination] = useState({
-    lat: 1.1454597394600972,
-    lng: 104.02822995479345,
-  });
+  const [destination, setDestination] = useState(null);
   const [map, setMap] = useState(null);
+
+  const getClosestLocation = useCallback(async () => {
+    const temp = findClosestLocation(location);
+    setDestination({ lat: Number(temp.lat), lng: Number(temp.long) });
+  }, [location]);
 
   useEffect(() => {
     const directionsService = new google.maps.DirectionsService();
@@ -29,6 +62,7 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
       },
 
       (result, status) => {
+        console.log("🚀 ~ file: Map.js:70 ~ useEffect ~ result:", result);
         if (status === google.maps.DirectionsStatus.OK) {
           directionsRenderer.setDirections(result);
         } else {
@@ -57,7 +91,10 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
         }}
         onChange={(e) => setCoords({ lat: e.center.lat, lng: e.center.lng })}
         yesIWantToUseGoogleMapApiInternals
-        onGoogleApiLoaded={({ map }) => setMap(map)}
+        onGoogleApiLoaded={async ({ map }) => {
+          setMap(map);
+          getClosestLocation();
+        }}
       >
         {places.length &&
           places.map((place, i) => (
