@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GoogleMapReact from "google-map-react";
 import { Paper, Typography } from "@material-ui/core";
 
@@ -9,14 +9,17 @@ import Marker from "./Marker.js";
 
 const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
   const classes = useStyles();
-  // const [destination, setDestination] = useState();
+  const [destination, setDestination] = useState({
+    lat: 1.1454597394600972,
+    lng: 104.02822995479345,
+  });
+  const [map, setMap] = useState(null);
 
-  const apiIsLoaded = (map, maps) => {
+  useEffect(() => {
     const directionsService = new google.maps.DirectionsService();
     const directionsRenderer = new google.maps.DirectionsRenderer();
-    directionsRenderer.setMap(map);
 
-    const destination = { lat: 1.1454597394600972, lng: 104.02822995479345 };
+    directionsRenderer.setMap(map);
 
     directionsService.route(
       {
@@ -33,7 +36,12 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
         }
       }
     );
-  };
+
+    return () => {
+      directionsRenderer.setMap(null);
+      directionsRenderer.setDirections(null);
+    };
+  }, [map, location, destination]);
 
   return (
     <div className={classes.mapContainer}>
@@ -49,8 +57,7 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
         }}
         onChange={(e) => setCoords({ lat: e.center.lat, lng: e.center.lng })}
         yesIWantToUseGoogleMapApiInternals
-        onChildClick={(child) => setChildClicked(child)}
-        onGoogleApiLoaded={({ map, maps }) => apiIsLoaded(map, maps)}
+        onGoogleApiLoaded={({ map }) => setMap(map)}
       >
         {places.length &&
           places.map((place, i) => (
@@ -59,12 +66,13 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
               lat={Number(place.lat)}
               lng={Number(place.long)}
               key={i}
-              // onClick={() =>
-              //   setDestination({
-              //     lat: Number(place.lat),
-              //     lng: Number(place.long),
-              //   })
-              // }
+              onClick={() => {
+                setChildClicked(i);
+                setDestination({
+                  lat: Number(place.lat),
+                  lng: Number(place.long),
+                });
+              }}
             >
               <Paper elevation={3} className={classes.paper}>
                 <Typography
