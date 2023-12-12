@@ -23,6 +23,7 @@ const calculateDistance = (location1, location2) => {
   return distance;
 };
 
+// dia akan membaca semua data yang telah dibuat untuk di hitung lokasi mana yang paling dekat
 const findClosestLocation = (location) => {
   let closestLocation;
   let minDistance = Number.MAX_VALUE;
