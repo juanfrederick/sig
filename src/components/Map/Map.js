@@ -91,7 +91,7 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
         }}
         onChange={(e) => setCoords({ lat: e.center.lat, lng: e.center.lng })}
         yesIWantToUseGoogleMapApiInternals
-        onGoogleApiLoaded={async ({ map }) => {
+        onGoogleApiLoaded={({ map }) => {
           setMap(map);
           getClosestLocation();
         }}
