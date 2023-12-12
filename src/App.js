@@ -11,6 +11,7 @@ const App = () => {
   const [childClicked, setChildClicked] = useState(null);
 
   useEffect(() => {
+    // untuk mendaptkan lokasi saat ini
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
         setCoords({ lat: latitude, lng: longitude });
@@ -25,6 +26,10 @@ const App = () => {
       <Header />
       <Grid container spacing={3} style={{ width: "100%" }}>
         <Grid item xs={12} md={4}>
+          {/* 
+            ini untuk menampilkan data puskesmas sebelah kiri
+            data di ambil dari dummy yang sudah di input
+          */}
           <List childClicked={childClicked} places={dummy} />
         </Grid>
         <Grid
@@ -37,6 +42,7 @@ const App = () => {
             alignItems: "center",
           }}
         >
+          {/* ini untuk memanggil component maps untuk ditampilkan di sebelah kanan */}
           <Map
             setChildClicked={setChildClicked}
             setCoords={setCoords}

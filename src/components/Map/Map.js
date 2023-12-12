@@ -45,6 +45,7 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
 
   const getClosestLocation = useCallback(async () => {
     const temp = findClosestLocation(location);
+    // untuk menset lokasi dari puskesmas terdekat yang didapat
     setDestination({ lat: Number(temp.lat), lng: Number(temp.long) });
   }, [location]);
 
@@ -74,10 +75,12 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
       directionsRenderer.setMap(null);
       directionsRenderer.setDirections(null);
     };
+    // ketika lokasi berubah maka akan mengeload rute dari lokasi yang telah didapat
   }, [map, location, destination]);
 
   return (
     <div className={classes.mapContainer}>
+      {/* untuk menampilkan maps */}
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
         center={coords}
@@ -91,6 +94,7 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
         onChange={(e) => setCoords({ lat: e.center.lat, lng: e.center.lng })}
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map }) => {
+          // ketika maps ngeload, dia akan mengambil lokasi terdekat
           setMap(map);
           getClosestLocation();
         }}
@@ -104,6 +108,7 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
               key={i}
               onClick={() => {
                 setChildClicked(i);
+                // ketika di pencet akan merubah lokasi puskesmas yang telah dipilih
                 setDestination({
                   lat: Number(place.lat),
                   lng: Number(place.long),
