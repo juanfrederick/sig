@@ -34,4 +34,14 @@ export default makeStyles(() => ({
     borderRadius: "50%",
     boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
   },
+  distance: {
+    fontSize: "1.5em",
+    padding: "8px",
+    border: "1px solid #ccc",
+    margin: "8px 0",
+    minWidth: "150px",
+    textAlign: "center",
+    borderRadius: "4px",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+  },
 }));

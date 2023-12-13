@@ -43,6 +43,7 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
   const classes = useStyles();
   const [destination, setDestination] = useState(null);
   const [map, setMap] = useState(null);
+  const [distance, setDistance] = useState(null);
 
   const getClosestLocation = useCallback(async () => {
     const temp = findClosestLocation(location);
@@ -53,6 +54,8 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
   useEffect(() => {
     const directionsService = new google.maps.DirectionsService();
     const directionsRenderer = new google.maps.DirectionsRenderer();
+
+    console.log("INI LOCATION", location);
 
     directionsRenderer.setMap(map);
 
@@ -66,6 +69,10 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
       (result, status) => {
         if (status === google.maps.DirectionsStatus.OK) {
           directionsRenderer.setDirections(result);
+
+          const calculatedDistance = result.routes[0].legs[0].distance.text;
+
+          setDistance(calculatedDistance);
         } else {
           console.error(`error fetching directions ${result}`);
         }
@@ -131,6 +138,7 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
 
         <Marker position={location} title="My Marker" />
       </GoogleMapReact>
+      <div className={classes.distance}>Jarak: {distance}</div>
     </div>
   );
 };
