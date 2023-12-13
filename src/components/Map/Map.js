@@ -45,7 +45,7 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
   const [distance, setDistance] = useState(null);
 
   const getClosestLocation = useCallback(async () => {
-    const temp = findClosestLocation(location);
+    const temp = await findClosestLocation(location);
     // untuk menset lokasi dari puskesmas terdekat yang didapat
     setDestination({ lat: Number(temp.lat), lng: Number(temp.long) });
   }, [location]);
