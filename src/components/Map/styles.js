@@ -44,4 +44,16 @@ export default makeStyles(() => ({
     borderRadius: "4px",
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
   },
+  closestBtn: {
+    padding: "10px 15px", // atur padding untuk memberikan ruang di dalam tombol
+    fontSize: "1em", // ukuran font
+    backgroundColor: "#3498db", // warna latar belakang
+    color: "#ffffff", // warna teks
+    border: "none", // hilangkan batas
+    borderRadius: "5px", // radius sudut untuk tampilan yang lebih lembut
+    cursor: "pointer", // tampilkan kursor tangan saat diarahkan
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // tambahkan efek bayangan
+    transition: "background-color 0.3s", // animasi perubahan warna latar belakang
+    margin: "8px 0", // tambahkan margin atas dan bawah
+  },
 }));

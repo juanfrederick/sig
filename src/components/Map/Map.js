@@ -139,6 +139,14 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
         <Marker position={location} title="My Marker" />
       </GoogleMapReact>
       <div className={classes.distance}>Jarak: {distance}</div>
+      <button
+        className={classes.closestBtn}
+        onClick={() => {
+          getClosestLocation();
+        }}
+      >
+        Closest Location
+      </button>
     </div>
   );
 };
