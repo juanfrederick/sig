@@ -43,6 +43,7 @@ export default makeStyles(() => ({
     textAlign: "center",
     borderRadius: "4px",
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+    flex: 1,
   },
   closestBtn: {
     padding: "10px 15px", // atur padding untuk memberikan ruang di dalam tombol
@@ -55,5 +56,10 @@ export default makeStyles(() => ({
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", // tambahkan efek bayangan
     transition: "background-color 0.3s", // animasi perubahan warna latar belakang
     margin: "8px 0", // tambahkan margin atas dan bawah
+  },
+  bottomContent: {
+    display: "flex",
+    flexDirection: "row-reverse",
+    gap: "20px",
   },
 }));

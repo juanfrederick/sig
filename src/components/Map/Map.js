@@ -5,7 +5,6 @@ import { Paper, Typography } from "@material-ui/core";
 
 import mapStyles from "../../mapStyles";
 import useStyles from "./styles.js";
-import Marker from "./Marker.js";
 import { data } from "../../constant/data.js";
 
 const calculateDistance = (location1, location2) => {
@@ -55,10 +54,7 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
     const directionsService = new google.maps.DirectionsService();
     const directionsRenderer = new google.maps.DirectionsRenderer();
 
-    console.log("INI LOCATION", location);
-
     directionsRenderer.setMap(map);
-
     directionsService.route(
       {
         origin: location,
@@ -71,7 +67,6 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
           directionsRenderer.setDirections(result);
 
           const calculatedDistance = result.routes[0].legs[0].distance.text;
-
           setDistance(calculatedDistance);
         } else {
           console.error(`error fetching directions ${result}`);
@@ -135,18 +130,18 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
               </Paper>
             </button>
           ))}
-
-        <Marker position={location} title="My Marker" />
       </GoogleMapReact>
-      <div className={classes.distance}>Jarak: {distance}</div>
-      <button
-        className={classes.closestBtn}
-        onClick={() => {
-          getClosestLocation();
-        }}
-      >
-        Closest Location
-      </button>
+      <div className={classes.bottomContent}>
+        <div className={classes.distance}>Jarak: {distance}</div>
+        <button
+          className={classes.closestBtn}
+          onClick={() => {
+            getClosestLocation();
+          }}
+        >
+          Closest Location
+        </button>
+      </div>
     </div>
   );
 };
