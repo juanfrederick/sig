@@ -18,7 +18,9 @@ const List = ({ places, childClicked }) => {
 
   return (
     <div className={classes.container}>
-      <Typography variant="h4">Puskesmas Batam</Typography>
+      <Typography variant="h4" style={{ paddingBottom: "16px" }}>
+        Puskesmas Batam
+      </Typography>
 
       <Grid container spacing={3} className={classes.list}>
         {places?.map((place, i) => (

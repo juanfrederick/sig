@@ -81,6 +81,18 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
     // ketika lokasi berubah maka akan mengeload rute dari lokasi yang telah didapat
   }, [map, location, destination]);
 
+  useEffect(() => {
+    if (destination) {
+      const { lat, lng } = destination;
+
+      places.forEach((val, index) => {
+        if (lat === Number(val.lat) && lng === Number(val.long)) {
+          setChildClicked(index);
+        }
+      });
+    }
+  }, [destination, setChildClicked, places]);
+
   return (
     <div className={classes.mapContainer}>
       {/* untuk menampilkan maps */}
