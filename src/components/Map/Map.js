@@ -84,12 +84,13 @@ const Map = ({ coords, places, setCoords, setChildClicked, location }) => {
   useEffect(() => {
     if (destination) {
       const { lat, lng } = destination;
+      const selectedIndex = places.findIndex(
+        (val) => lat === Number(val.lat) && lng === Number(val.long)
+      );
 
-      places.forEach((val, index) => {
-        if (lat === Number(val.lat) && lng === Number(val.long)) {
-          setChildClicked(index);
-        }
-      });
+      if (selectedIndex !== -1) {
+        setChildClicked(selectedIndex);
+      }
     }
   }, [destination, setChildClicked, places]);
 
